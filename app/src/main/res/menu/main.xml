@@ -8,9 +8,10 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/menu_search"
-        android:title="@string/menu_search"
-        appcompat:actionViewClass="android.support.v7.widget.SearchView"
-        appcompat:showAsAction="always"/>
+    <item android:id="@+id/menu_search"
+        android:title="Arama"
+        android:icon="@android:drawable/ic_menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"
+        />
 </menu>
