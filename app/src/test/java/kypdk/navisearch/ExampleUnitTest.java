@@ -1,4 +1,4 @@
-package kypdk.navigation_searcview;
+package kypdk.navisearch;
 
 import org.junit.Test;
 

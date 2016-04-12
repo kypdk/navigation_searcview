@@ -1,26 +1,26 @@
-package kypdk.navigation_searcview;
+package kypdk.navisearch;
 
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.widget.TextView;
 
-import kypdk.navigation_searcview.R;
-
-public class SearchResultsActivity extends AppCompatActivity {
+/**
+ * Created by Kypdk on 13.04.2016.
+ */
+public class Arama extends AppCompatActivity {
 
     private TextView tarama;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.arama);
         tarama = (TextView) findViewById(R.id.t_arama);
 
 

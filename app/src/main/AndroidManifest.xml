@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kypdk.navigation_searcview">
+    package="kypdk.navisearch">
 
     <application
         android:allowBackup="true"
@@ -14,21 +14,20 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <meta-data
                 android:name="android.app.default_searchable"
-                android:value=".SearchResultsActivity" />
+                android:value=".Arama" />
         </activity>
 
         <activity
-            android:name=".SearchResultsActivity"
+            android:name=".Arama"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
 
-            <!-- to identify this activity as "searchable" -->
+
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
                 <category android:name="android.intent.category.DEFAULT" />
