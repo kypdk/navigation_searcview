@@ -22,7 +22,19 @@ public class Anasayfa extends Fragment {
         if (container == null) {
             return null;
         }
+        SearchView searchView2 = MainActivity.searchView;
+        searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Log.e("aranan kelime",query);
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return rootView;
     }
 }
