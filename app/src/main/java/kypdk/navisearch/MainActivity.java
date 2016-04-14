@@ -20,6 +20,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static SearchView searchView;
+
     Anasayfa f1 = new Anasayfa();
     FragmentManager fm = getFragmentManager();
     FragmentTransaction trans = fm.beginTransaction();
@@ -49,7 +51,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        trans.replace(R.id.fragment_container, f1).commit();
     }
 
     @Override
@@ -68,8 +69,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getMenuInflater().inflate(R.menu.main, menu);
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
+        searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        
+        trans.replace(R.id.fragment_container, f1).commit();
+
         return true;
     }
 
