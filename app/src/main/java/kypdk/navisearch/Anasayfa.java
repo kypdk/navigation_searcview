@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,8 @@ public class Anasayfa extends Fragment {
     FragmentTransaction trans;
     public ImageButton meal;
 
+    Arama aramaFG = new Arama();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.anasayfa, container, false);
@@ -26,7 +30,12 @@ public class Anasayfa extends Fragment {
         searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Log.e("aranan kelime",query);
+                Log.e("aranan kelime", query);
+
+                
+                trans.replace(R.id.fragment_container, aramaFG).commit();
+
+
                 return false;
             }
 
@@ -34,7 +43,11 @@ public class Anasayfa extends Fragment {
             public boolean onQueryTextChange(String newText) {
                 return false;
             }
+
+
         });
+
+
         return rootView;
     }
 }

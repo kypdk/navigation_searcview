@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static SearchView searchView;
 
     Anasayfa f1 = new Anasayfa();
+    Arama aramaFG = new Arama();
     FragmentManager fm = getFragmentManager();
     FragmentTransaction trans = fm.beginTransaction();
 
