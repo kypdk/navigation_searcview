@@ -32,9 +32,13 @@ public class Anasayfa extends Fragment {
             public boolean onQueryTextSubmit(String query) {
                 Log.e("aranan kelime", query);
 
+                Fragment newFragment = new Arama();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
+                transaction.replace(R.id.fragment_container, newFragment);
+                transaction.addToBackStack(null);
 
-
+                transaction.commit();
 
                 return false;
             }
