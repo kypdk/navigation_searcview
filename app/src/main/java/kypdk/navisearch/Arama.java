@@ -26,6 +26,9 @@ public class Arama extends Fragment {
         if (container == null) {
             return null;
         }
+
+
+
         SearchView searchView2 = MainActivity.searchView;
         searchView2.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -42,7 +45,7 @@ public class Arama extends Fragment {
             }
         });
 
-
+        tarama = (TextView) rootView.findViewById(R.id.t_arama);
         return rootView;
     }
 }

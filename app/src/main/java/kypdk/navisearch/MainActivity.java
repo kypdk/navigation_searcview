@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    public void setDegis() {
+        trans.replace(R.id.fragment_container, aramaFG).commit();
+    }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -117,4 +121,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

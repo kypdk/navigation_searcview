@@ -32,8 +32,8 @@ public class Anasayfa extends Fragment {
             public boolean onQueryTextSubmit(String query) {
                 Log.e("aranan kelime", query);
 
-                
-                trans.replace(R.id.fragment_container, aramaFG).commit();
+
+
 
 
                 return false;
